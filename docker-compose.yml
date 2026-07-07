@@ -1,0 +1,15 @@
+services:
+  vox2d:
+    build: .
+    image: vox2d:latest
+    container_name: vox2d
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
