@@ -33,7 +33,7 @@ export function createLlmClient(provider: LlmProvider): OpenAI {
 }
 
 export function getDefaultModel(provider: LlmProvider): string {
-  if (provider === "openrouter") return "openai/gpt-4o-mini";
+  if (provider === "openrouter") return "openai/gpt-oss-120b:free";
   return "llama3.1";
 }
 
