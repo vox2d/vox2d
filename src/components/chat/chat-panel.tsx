@@ -256,7 +256,6 @@ export default function ChatPanel() {
       >
         <Stack direction="row" spacing={1} alignItems="flex-end">
           <TextField
-            fullWidth
             multiline
             minRows={1}
             maxRows={6}
@@ -271,6 +270,7 @@ export default function ChatPanel() {
             placeholder="Describe the diagram you want… (Enter to send, Shift+Enter for newline)"
             disabled={isStreaming}
             size="small"
+            sx={{ flex: 1, minWidth: 0 }}
           />
           {settings.sttProvider !== "none" && (
             <Tooltip title="Voice input">

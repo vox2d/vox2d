@@ -5,6 +5,7 @@
   "description": "Voice/text to Mermaid diagram agent",
   "scripts": {
     "dev": "next dev",
+    "dev:local": "bash scripts/dev-local.sh",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
